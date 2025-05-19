@@ -1,5 +1,6 @@
 import 'package:flutter/material.dart';
 import 'package:google_fonts/google_fonts.dart';
+import 'package:study_mate_application/pages/contoh_soal.dart';
 import 'package:study_mate_application/pages/home_screen.dart';
 import 'package:study_mate_application/widgets/navigation_item.dart';
 import 'package:study_mate_application/pages/profile_screen.dart';
@@ -71,29 +72,41 @@ class CourseScreen extends StatelessWidget {
               ),
             ),
             SizedBox(height: 5),
-            Container(
-              margin: EdgeInsets.symmetric(horizontal: 20),
-              child: Row(
-                children: [
-                  Image.asset('assets/soal.png'),
-                  Column(
-                    crossAxisAlignment: CrossAxisAlignment.start,
-                    children: [
-                      Text(
-                        '5 Contoh Soal',
-                        style: GoogleFonts.openSans(
-                          fontWeight: FontWeight.bold,
-                        ),
-                      ),
-                      Text(
-                        'Contoh soal yaitu 5 yang \nsesuai dengan permintaan',
-                        style: GoogleFonts.openSans(
-                          color: Color.fromRGBO(95, 95, 95, 1),
-                        ),
-                      ),
-                    ],
+            GestureDetector(
+              onTap: () {
+                Navigator.push(
+                  context,
+                  MaterialPageRoute(
+                    builder: (context) {
+                      return ContohSoal();
+                    },
                   ),
-                ],
+                );
+              },
+              child: Container(
+                margin: EdgeInsets.symmetric(horizontal: 20),
+                child: Row(
+                  children: [
+                    Image.asset('assets/soal.png'),
+                    Column(
+                      crossAxisAlignment: CrossAxisAlignment.start,
+                      children: [
+                        Text(
+                          '5 Contoh Soal',
+                          style: GoogleFonts.openSans(
+                            fontWeight: FontWeight.bold,
+                          ),
+                        ),
+                        Text(
+                          'Contoh soal yaitu 5 yang \nsesuai dengan permintaan',
+                          style: GoogleFonts.openSans(
+                            color: Color.fromRGBO(95, 95, 95, 1),
+                          ),
+                        ),
+                      ],
+                    ),
+                  ],
+                ),
               ),
             ),
             Container(
