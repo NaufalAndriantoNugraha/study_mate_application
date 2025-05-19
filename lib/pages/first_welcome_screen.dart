@@ -1,8 +1,8 @@
 import 'package:flutter/material.dart';
 import 'package:study_mate_application/pages/second_welcome_screen.dart';
 
-class HomePage extends StatelessWidget {
-  const HomePage({super.key});
+class FirstWelcomeScreen extends StatelessWidget {
+  const FirstWelcomeScreen({super.key});
 
   @override
   Widget build(BuildContext context) {

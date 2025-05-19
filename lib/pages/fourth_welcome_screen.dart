@@ -1,5 +1,6 @@
 import 'package:flutter/material.dart';
 import 'package:google_fonts/google_fonts.dart';
+import 'package:study_mate_application/pages/home_screen.dart';
 
 class FourthWelcomeScreen extends StatelessWidget {
   const FourthWelcomeScreen({super.key});
@@ -78,7 +79,19 @@ class FourthWelcomeScreen extends StatelessWidget {
                 ],
               ),
               SizedBox(height: 10),
-              ElevatedButton(onPressed: () {}, child: Text('Selanjutnya')),
+              ElevatedButton(
+                onPressed: () {
+                  Navigator.push(
+                    context,
+                    MaterialPageRoute(
+                      builder: (context) {
+                        return HomeScreen();
+                      },
+                    ),
+                  );
+                },
+                child: Text('Selanjutnya'),
+              ),
             ],
           ),
         ),
