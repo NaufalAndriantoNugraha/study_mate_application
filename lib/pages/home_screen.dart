@@ -1,7 +1,6 @@
 import 'package:flutter/material.dart';
 import 'package:flutter_svg/svg.dart';
 import 'package:google_fonts/google_fonts.dart';
-import 'package:study_mate_application/pages/course_screen.dart';
 import 'package:study_mate_application/pages/profile_screen.dart';
 import 'package:study_mate_application/widgets/category.dart';
 import 'package:study_mate_application/widgets/navigation_item.dart';
@@ -15,9 +14,6 @@ class HomeScreen extends StatefulWidget {
 }
 
 class _HomeScreenState extends State<HomeScreen> {
-  int selectedIndex = 0;
-  List<Widget> pages = [HomeScreen(), CourseScreen(), ProfileScreen()];
-
   var categories = [
     ['assets/categories/kimia.png', 'Kimia'],
     ['assets/categories/matematika.png', 'Matematika'],
@@ -158,9 +154,30 @@ class _HomeScreenState extends State<HomeScreen> {
           child: Row(
             mainAxisAlignment: MainAxisAlignment.spaceAround,
             children: [
-              NavigationItem(imageUrl: 'assets/home.png', isOn: true),
-              NavigationItem(imageUrl: 'assets/university.png', isOn: false),
-              NavigationItem(imageUrl: 'assets/account.png', isOn: false),
+              NavigationItem(
+                imageUrl: 'assets/home.png',
+                isOn: true,
+                onClick: () {},
+              ),
+              NavigationItem(
+                imageUrl: 'assets/university.png',
+                isOn: false,
+                onClick: () {},
+              ),
+              NavigationItem(
+                imageUrl: 'assets/account.png',
+                isOn: false,
+                onClick: () {
+                  Navigator.push(
+                    context,
+                    MaterialPageRoute(
+                      builder: (context) {
+                        return ProfileScreen();
+                      },
+                    ),
+                  );
+                },
+              ),
             ],
           ),
         ),
