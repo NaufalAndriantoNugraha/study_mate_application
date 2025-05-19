@@ -1,6 +1,7 @@
 import 'package:flutter/material.dart';
 import 'package:google_fonts/google_fonts.dart';
 import 'package:study_mate_application/pages/third_welcome_screen.dart';
+import 'package:study_mate_application/widgets/gradient_button.dart';
 
 class SecondWelcomeScreen extends StatelessWidget {
   const SecondWelcomeScreen({super.key});
@@ -79,7 +80,7 @@ class SecondWelcomeScreen extends StatelessWidget {
                 ],
               ),
               SizedBox(height: 10),
-              ElevatedButton(
+              GradientButton(
                 onPressed: () {
                   Navigator.push(
                     context,
@@ -90,7 +91,6 @@ class SecondWelcomeScreen extends StatelessWidget {
                     ),
                   );
                 },
-                child: Text('Selanjutnya'),
               ),
             ],
           ),

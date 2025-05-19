@@ -1,5 +1,6 @@
 import 'package:flutter/material.dart';
 import 'package:study_mate_application/pages/second_welcome_screen.dart';
+import 'package:study_mate_application/widgets/gradient_button.dart';
 
 class FirstWelcomeScreen extends StatelessWidget {
   const FirstWelcomeScreen({super.key});
@@ -13,10 +14,7 @@ class FirstWelcomeScreen extends StatelessWidget {
           mainAxisAlignment: MainAxisAlignment.center,
           children: [
             Image.asset('assets/study_mate_logo.png'),
-            ElevatedButton(
-              style: ElevatedButton.styleFrom(
-                backgroundColor: Color.fromRGBO(57, 87, 237, 100),
-              ),
+            GradientButton(
               onPressed: () {
                 Navigator.push(
                   context,
@@ -27,7 +25,6 @@ class FirstWelcomeScreen extends StatelessWidget {
                   ),
                 );
               },
-              child: Text('Selanjutnya', style: TextStyle()),
             ),
           ],
         ),
