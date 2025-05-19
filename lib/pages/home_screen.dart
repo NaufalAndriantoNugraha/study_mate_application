@@ -1,6 +1,7 @@
 import 'package:flutter/material.dart';
 import 'package:flutter_svg/svg.dart';
 import 'package:google_fonts/google_fonts.dart';
+import 'package:study_mate_application/pages/course_screen.dart';
 import 'package:study_mate_application/pages/profile_screen.dart';
 import 'package:study_mate_application/widgets/category.dart';
 import 'package:study_mate_application/widgets/navigation_item.dart';
@@ -162,7 +163,16 @@ class _HomeScreenState extends State<HomeScreen> {
               NavigationItem(
                 imageUrl: 'assets/university.png',
                 isOn: false,
-                onClick: () {},
+                onClick: () {
+                  Navigator.push(
+                    context,
+                    MaterialPageRoute(
+                      builder: (context) {
+                        return CourseScreen();
+                      },
+                    ),
+                  );
+                },
               ),
               NavigationItem(
                 imageUrl: 'assets/account.png',

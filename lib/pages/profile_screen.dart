@@ -1,5 +1,6 @@
 import 'package:flutter/material.dart';
 import 'package:google_fonts/google_fonts.dart';
+import 'package:study_mate_application/pages/course_screen.dart';
 import 'package:study_mate_application/pages/home_screen.dart';
 import 'package:study_mate_application/widgets/navigation_item.dart';
 
@@ -195,7 +196,16 @@ class ProfileScreen extends StatelessWidget {
               NavigationItem(
                 imageUrl: 'assets/university.png',
                 isOn: false,
-                onClick: () {},
+                onClick: () {
+                  Navigator.push(
+                    context,
+                    MaterialPageRoute(
+                      builder: (context) {
+                        return CourseScreen();
+                      },
+                    ),
+                  );
+                },
               ),
               NavigationItem(
                 imageUrl: 'assets/account.png',
